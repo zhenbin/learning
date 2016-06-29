@@ -14,6 +14,12 @@
             <artifactId>odps-sdk-mapred</artifactId>
             <version>0.20.7</version>
         </dependency>
+        <dependency>
+            <groupId>com.aliyun.odps</groupId>
+            <artifactId>odps-sdk-mapred</artifactId>
+            <classifier>sources</classifier>
+            <version>0.20.7</version>
+        </dependency>
     </dependencies>
 
 </project>
