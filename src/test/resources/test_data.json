@@ -1,0 +1,45 @@
+{
+    "customParam": {
+        "solutionId": "41897",
+        "sellerId": "24322432",
+        "templateId": "1233",
+        "commonTag": "name&1:0.5;gender&1:0.5;ageClass&1:0.5;efficiency&1:0.5;buyerStarLevelId&1:0.5;usefulAddressProv&1:0.5;GroupSeries&1:0.5;i_catPrefer&1:0.5"
+    },
+    "dataSource": [
+        {
+            "sourceName": "Cate_Price_Map_CateID",
+            "tuples": [
+                "i_catPreferPrice_[1-63] [1-63]"
+            ]
+        },
+        {
+            "sourceName": "crmx_csc_seller_2_item",
+            "tuples": [
+                "24322432 #{item[1-20]}"
+            ]
+        },
+        {
+            "sourceName": "crmx_item_advanced_tag_score",
+            "tuples": [
+                "24322432|#{item[2-3]} reserve_price&1:20[0-1]0.0",
+                "24322432|#{item2} reserve_price&2:10.0;#{commonTag}",
+                "24322432|#{item3} hot&1:0.9;#{commonTag}",
+                "24322432|#{item[4-6]} #{commonTag}"
+            ],
+            "comment": [
+                "给前两个商品打上相同的一级类目价格偏好标签，价格分别为2000.0和2010.0",
+                "给第三个商品打上一级类目价格偏好标签及普通标签，价格为10.0",
+                "给第四个商品打上普通标签和热门标签"
+            ]
+        }
+    ],
+    "preLink": "http://tui.daily.taobao.net/recommend?debug=true&_sid_=#{solutionId}&sellerId=#{sellerId}&templateId=#{templateId}",
+    "testCase": [
+        {
+            "caseName": "用例名称",
+            "link": "http://dasfd",
+            "expect": "fdsad,dfadfs"
+        },
+        {}
+    ]
+}

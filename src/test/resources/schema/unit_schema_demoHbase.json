@@ -1,0 +1,49 @@
+{
+    "schema_version": 2,
+    "key": [
+        {
+            "name": "category",
+            "type": "LONG",
+            "comment": "叶子类目"
+        },
+        {
+            "name": "nick",
+            "type": "STRING",
+            "max_byte_length": 128,
+            "comment": "用户昵称"
+        }
+    ],
+    "key_name": "category_nick",
+    "key_separator": "-",
+    "value": [
+        {
+            "name": "shop_id",
+            "type": "LONG",
+            "comment": "店铺ID"
+        },
+        {
+            "name": "item_ids",
+            "type": "OBJECT",
+            "comment": "商品ID列表",
+            "value": [
+                {
+                    "name": "item_id",
+                    "type": "LONG",
+                    "comment": "商品数字ID"
+                },
+                {
+                    "name": "tag",
+                    "type": "STRING",
+                    "comment": "商品标签"
+                }
+            ],
+            "tuple_separator": ";",
+            "segment_separator": ","
+        },
+        {
+            "name": "seller_id",
+            "type": "INT",
+            "comment": "卖家ID"
+        }
+    ]
+}

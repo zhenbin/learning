@@ -1,0 +1,9 @@
+{
+    "dataSource": [
+        {
+            "sourceName": "lingxia_test_now",
+            "pkey": "id",
+            "value": "scene_owner,scene_name,debug_layers,gmt_create"
+        }
+    ]
+}
