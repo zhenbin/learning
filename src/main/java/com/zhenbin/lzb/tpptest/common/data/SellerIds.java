@@ -1,4 +1,4 @@
-package com.zhenbin.lzb.tpptest.model.data;
+package com.zhenbin.lzb.tpptest.common.data;
 
 import com.google.common.collect.Lists;
 

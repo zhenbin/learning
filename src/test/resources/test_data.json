@@ -8,6 +8,7 @@
     "dataSource": [
         {
             "sourceName": "Cate_Price_Map_CateID",
+            "sourceType": "igraph",
             "tuples": [
                 "i_catPreferPrice_[1-63] [1-63]"
             ]

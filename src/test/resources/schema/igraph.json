@@ -3,7 +3,14 @@
         {
             "sourceName": "lingxia_test_now",
             "pkey": "id",
-            "value": "scene_owner,scene_name,debug_layers,gmt_create"
+            "value": "scene_owner,scene_name,debug_layers,gmt_create",
+            "comment": "测试一下"
+        },
+        {
+            "sourceName": "TPP_qnzf_rec_s2c2i_kv",
+            "pkey": "seller_cate_key",
+            "value": "itemids",
+            "comment": "测试一下"
         }
     ]
 }

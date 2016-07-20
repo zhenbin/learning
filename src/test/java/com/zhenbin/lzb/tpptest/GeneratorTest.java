@@ -1,12 +1,9 @@
 package com.zhenbin.lzb.tpptest;
 
-import com.taobao.igraph.client.core.IGraphClient;
-import com.taobao.igraph.client.core.IGraphClientBuilder;
-import com.taobao.igraph.client.core.IGraphClientWrap;
-import com.taobao.terminator.hdfs.util.Assert;
 import com.zhenbin.lzb.tpptest.service.tuple.process.TupleGenerator;
 import com.zhenbin.lzb.tpptest.service.tuple.process.TupleManager;
 import javafx.util.Pair;
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.List;
@@ -43,18 +40,4 @@ public class GeneratorTest {
         tupleManager.insertData("test_data1.json");
     }
 
-    public static void main(String[] args) {
-//        IGraphClientWrap
-//        IGraphClientBuilder builder = IGraphClientBuilder.create();
-//        builder.setSocketTimeout(3000);
-//        builder.setConnectTimeout(3000);
-//        builder.setConnectionRequestTimeout(3000);
-//        builder.setSearchCluster("DEFAULT");
-//        builder.setUpdateCluster("DEFAULT");
-//        builder.setMaxConnTotal(1024);
-//        builder.setMaxConnPerRoute(200);
-//        client = builder.build("specify_your_application_name_here", searchDomain, updateDomain);
-
-        Pair<String, String> pair = new Pair<String, String>(null, "");
-    }
 }

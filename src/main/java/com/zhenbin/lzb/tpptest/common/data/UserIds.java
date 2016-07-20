@@ -1,4 +1,4 @@
-package com.zhenbin.lzb.tpptest.model.data;
+package com.zhenbin.lzb.tpptest.common.data;
 
 import com.google.common.collect.Lists;
 
@@ -24,7 +24,7 @@ public class UserIds {
     public static final String user_id15 = "3594192703";//nick:snsdongtaiguangchang001
     public static final String user_id17 = "3596530353";//nick:licaibaoxian001
     public static final String user_id18 = "3596530354";//nick:licaibaoxian002
-    //FIXME::test_guesslike**和 test_rt_guesslike**用于实时推荐相关的，涉及多张表的数据清理，请调试完及时还原数据
+    //test_guesslike**和 test_rt_guesslike**用于实时推荐相关的，涉及多张表的数据清理，请调试完及时还原数据
     public static final String user_id19 = "3605140059";//nick=test_guesslike_01
     public static final String user_id20 = "3605510711";//nick=test_guesslike_02
     public static final String user_id21 = "3614209585";//nick:test_guesslike_10

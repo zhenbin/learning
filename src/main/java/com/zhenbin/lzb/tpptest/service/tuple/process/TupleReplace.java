@@ -1,10 +1,10 @@
 package com.zhenbin.lzb.tpptest.service.tuple.process;
 
-import com.zhenbin.lzb.tpptest.model.ConstData;
-import com.zhenbin.lzb.tpptest.model.data.Cids;
-import com.zhenbin.lzb.tpptest.model.data.ItemIds;
-import com.zhenbin.lzb.tpptest.model.data.SellerIds;
-import com.zhenbin.lzb.tpptest.model.data.UserIds;
+import com.zhenbin.lzb.tpptest.common.ConstData;
+import com.zhenbin.lzb.tpptest.common.data.Cids;
+import com.zhenbin.lzb.tpptest.common.data.ItemIds;
+import com.zhenbin.lzb.tpptest.common.data.SellerIds;
+import com.zhenbin.lzb.tpptest.common.data.UserIds;
 
 import java.util.ArrayList;
 import java.util.List;

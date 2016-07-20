@@ -1,0 +1,19 @@
+{
+    "customParam": {
+        "solutionId": "41897"
+    },
+    "dataSource": [
+        {
+            "sourceName": "TPP_qnzf_rec_s2c2i_kv",
+            "tuples": [
+                "abc_[1-3] #{item[1-3]}"
+            ]
+        },
+        {
+            "sourceName": "TPP_qnzf_rec_s2c2i_kv",
+            "tuples": [
+                "abc_[6-7] #{item[6-7]}"
+            ]
+        }
+    ]
+}

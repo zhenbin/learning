@@ -4,7 +4,8 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.TypeReference;
-import com.zhenbin.lzb.tpptest.model.ConstData;
+import com.zhenbin.lzb.tpptest.common.ConstData;
+import com.zhenbin.lzb.tpptest.service.tuple.source.DataSourceService;
 import com.zhenbin.lzb.util.JsonObjectUtil;
 
 import java.util.ArrayList;
@@ -44,13 +45,23 @@ public class TupleManager {
         //对每个数据源生成数据
         for (Object datasource : datasources) {
             String sourceName = ((JSONObject) datasource).getString(ConstData.TEST_DATA_SOURCE_NAME);
+            //测试数据的数据类型，如果没有设置的话默认为igraph
+            String sourceType = ((JSONObject) datasource).getString(ConstData.TEST_DATA_SOURCE_TYPE);
+            if (null == sourceType) {
+                sourceType = ConstData.DATA_SOURCE_IGRAPH;
+            }
             String listStr = ((JSONObject) datasource).getString(ConstData.TEST_DATA_TUPLES);
-            List<String> abc = JSON.parseObject(listStr, new TypeReference<List<String>>() {
+            List<String> keysAndfields = JSON.parseObject(listStr, new TypeReference<List<String>>() {
             });
             System.out.println("==========================");
             System.out.println("| " + sourceName);
             System.out.println("==========================");
-            List<String> abcd = process(abc, customMap);
+            List<String> tuples = process(keysAndfields, customMap);
+            //逐条插入igraph日常环境
+            for (String tuple : tuples) {
+                DataSourceService.insert(sourceName, tuple, sourceType);
+                System.out.println("insert: " + tuple);
+            }
         }
     }
 

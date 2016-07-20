@@ -3,7 +3,7 @@ package com.zhenbin.lzb.util;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.zhenbin.lzb.tpptest.model.ConstData;
+import com.zhenbin.lzb.tpptest.common.ConstData;
 
 /**
  * Created by zhenbin.lzb on 2016/7/15.
@@ -21,7 +21,7 @@ public class JsonObjectUtil {
      * @return
      */
     public static JSONObject IgraphMeta(String sourceName) {
-        String jsonStr = ReadFileUtil.readAsClassPath(ConstData.IGRAPH_FILE_PATH, ConstData.IGRAPH_CHARSET);
+        String jsonStr = ReadFileUtil.readAsClassPath(ConstData.IGRAPH_CLASS_PATH, ConstData.IGRAPH_CHARSET);
         JSONObject igraphConfig = JSON.parseObject(jsonStr);
         JSONArray dataSource = igraphConfig.getJSONArray(ConstData.IGRAPH_DATA_SOURCE);
         for (Object config : dataSource) {
@@ -30,6 +30,7 @@ public class JsonObjectUtil {
                 return configJson;
             }
         }
+        System.out.println("ERROR : 找不到对应的数据源配置");
         return null;
     }
 
