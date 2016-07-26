@@ -58,6 +58,7 @@ public class TupleManager {
             System.out.println("==========================");
             List<String> tuples = process(keysAndfields, customMap);
             //逐条插入igraph日常环境
+            System.out.println("-------开始插入数据--------");
             for (String tuple : tuples) {
                 DataSourceService.insert(sourceName, tuple, sourceType);
                 System.out.println("insert: " + tuple);

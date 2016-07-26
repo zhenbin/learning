@@ -26,7 +26,7 @@ public class TupleGenerator implements TupleProcessor {
      * @return
      */
     public List<String> process(List<String> originList, Map<String, String> customParams) {
-        System.out.println("-------开始指产生数据--------");
+        System.out.println("-------开始产生数据--------");
         List<String> result = new ArrayList<String>();
         for (String originTuple : originList) {
             result.addAll(generateInts(originTuple));

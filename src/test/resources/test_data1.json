@@ -5,6 +5,7 @@
     "dataSource": [
         {
             "sourceName": "TPP_qnzf_rec_s2c2i_kv",
+            "sourceType": "igraph",
             "tuples": [
                 "abc_[1-3] #{item[1-3]}"
             ]

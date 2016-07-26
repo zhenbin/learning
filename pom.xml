@@ -24,11 +24,6 @@
             <artifactId>google-collections</artifactId>
             <version>1.0</version>
         </dependency>
-        <!--<dependency>-->
-            <!--<groupId>com.alibaba.glaucus</groupId>-->
-            <!--<artifactId>glaucus-sdk</artifactId>-->
-            <!--<version>3.2.18-SNAPSHOT</version>-->
-        <!--</dependency>-->
         <dependency>
             <groupId>com.alibaba.etao.igraph</groupId>
             <artifactId>igraph-client</artifactId>
