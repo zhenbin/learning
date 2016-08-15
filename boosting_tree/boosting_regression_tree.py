@@ -1,6 +1,5 @@
 from numpy import ones, mat, multiply
 
-
 class stump:
     def __init__(self, thresh=0.0, left_value=0.0, right_value=0.0, position=0):
         self.thresh = thresh

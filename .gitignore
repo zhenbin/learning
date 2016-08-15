@@ -2,4 +2,5 @@
 .idea
 target
 *.iml
-.Ds_Store≤
+.ipynb_checkpoints
+.Ds_Store
