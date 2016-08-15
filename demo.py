@@ -1,3 +1,4 @@
+from sklearn.ensemble import RandomForestClassifier
 from numpy import ones, dot, array, mat, multiply
 
 arr1 = ones((3, 4))
