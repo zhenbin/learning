@@ -18,15 +18,15 @@ class random_forest(kaggle_parent):
         max_features    : 挑选的特征数目，默认是"auto"（全选），也可以设置成"log2"、"sqrt"
         criterion       : 不确定性，有"gini"和"entropy"
         '''
-        rf = RandomForestClassifier(n_estimators=400, n_jobs=-1)
+        rf = RandomForestClassifier(n_estimators=400, n_jobs=-1, max_features="sqrt")
         return rf, train_x_small, train_y_small
 
     def test_parameters(self):
         pass
-        rf = RandomForestClassifier(n_estimators=400, n_jobs=-1)
-        # score: 0.96671
-        # ('Training Time used:', 1.1883150467398427, 'min')
-        # ('Test Time used:', 0.07169732430278468, 'min')
+        rf = RandomForestClassifier(n_estimators=400, n_jobs=-1, max_features="sqrt")
+        # score: 0.96714
+        # ('Training Time used:', 1.15419215024101, 'min')
+        # ('Test Time used:', 0.05699266602587727, 'min')
         train_data = pandas.read_csv("data/train.csv")
         train_x = train_data.values[0:, 1:]
         train_y = train_data.values[0:, 0]
@@ -34,5 +34,6 @@ class random_forest(kaggle_parent):
         test_x = test_x.values[0:, 0:]
 
         return rf, train_x, train_y, test_x, "data/result.rf.csv"
+
 
 random_forest().test()
