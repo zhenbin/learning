@@ -1,6 +1,5 @@
 import pandas
 from sklearn.ensemble import RandomForestClassifier
-import numpy
 
 from kaggle.kaggle_parent import kaggle_parent
 
@@ -18,7 +17,7 @@ class rf(kaggle_parent):
         # handle data_x
 
         # passengerid, name, ticket
-        data_x.drop(['PassengerId','Name','Ticket'], axis=1, inplace=True)
+        data_x.drop(['PassengerId', 'Name', 'Ticket'], axis=1, inplace=True)
 
         # embarked
         data_x['Embarked'] = data_x['Embarked'].fillna("S")
@@ -29,11 +28,8 @@ class rf(kaggle_parent):
         # fare
         data_x['Fare'].fillna(data_x['Fare'].median(), inplace=True)
 
-
-
-
-
         rf = RandomForestClassifier(n_estimators=400, n_jobs=-1, max_features="sqrt")
         return rf, train_x, train_y
+
 
 rf().train()
