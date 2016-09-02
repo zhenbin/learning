@@ -17,6 +17,7 @@ class link_list:
             self.head = node.next
         return node
 
+
     def add_to_next(self, node):
         node.next = self.head
         self.head = node
